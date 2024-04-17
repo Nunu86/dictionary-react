@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Wordsearch(props) {
-  console.log(props.results);
+  console.log(props.results.meanings);
   if (props.results.message === "Word not found") {
     return <div>Enter a word to search</div>;
   } else if (props.results) {
@@ -9,9 +9,10 @@ export default function Wordsearch(props) {
       <div>
         <div>{props.results.word}</div>
         <div>{props.results.phonetic}</div>
-        {props.results.meanings[0].map(function (value, index) {
+        else if (props.results.meanings) return{" "}
+        {props.results.meanings.map(function (value, index) {
           return (
-            <div>
+            <div key={index}>
               <p>{value.partOfSpeech}</p>
               <p>{value.definition}</p>
               <p>{value.example}</p>
