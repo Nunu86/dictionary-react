@@ -1,1 +1,15 @@
+.Form {
+  background: wheat;
+  border: 1px solid #f9f8fe;
+  border-radius: 5px;
+  box-shadow: 8px 8px 10px 5px burlywood;
+  padding: 30px;
+}
 
+.row2 {
+  background: rgb(70, 55, 27);
+}
+.Dictionary {
+  display: block;
+  text-align: center;
+}
