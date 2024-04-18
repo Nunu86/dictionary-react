@@ -7,8 +7,8 @@ export default function Wordsearch(props) {
   } else if (props.results) {
     return (
       <div>
-        <div>{props.results.word}</div>
-        <div>{props.results.phonetic}</div>
+        <div>Word: {props.results.word}</div>
+        <div>Pronounced: {props.results.phonetic}</div>
         {props.results.meanings.map(function (value, index) {
           console.log(value.synonyms);
           return (
