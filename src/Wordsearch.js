@@ -9,13 +9,14 @@ export default function Wordsearch(props) {
       <div>
         <div>{props.results.word}</div>
         <div>{props.results.phonetic}</div>
-        else if (props.results.meanings) return{" "}
         {props.results.meanings.map(function (value, index) {
+          console.log(value.synonyms);
           return (
             <div key={index}>
-              <p>{value.partOfSpeech}</p>
-              <p>{value.definition}</p>
-              <p>{value.example}</p>
+              <p>Part of Speech: {value.partOfSpeech}</p>
+              <p>Definition: {value.definition}</p>
+              <p>Example: {value.example}</p>
+              <p>Synonyms: {value.synonyms}</p>
             </div>
           );
         })}

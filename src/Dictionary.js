@@ -3,8 +3,8 @@ import axios from "axios";
 import Wordsearch from "./Wordsearch";
 
 export default function Dictionary() {
-  let [change, setChange] = useState(" ");
-  let [dataOutcome, setdataOutcome] = useState(" ");
+  let [change, setChange] = useState("");
+  let [dataOutcome, setdataOutcome] = useState(null);
 
   function displayResponse(response) {
     setdataOutcome(response.data);
@@ -32,7 +32,7 @@ export default function Dictionary() {
         <input type="submit" />
       </form>
 
-      <Wordsearch results={dataOutcome} />
+      {dataOutcome && <Wordsearch results={dataOutcome} />}
     </div>
   );
 }
